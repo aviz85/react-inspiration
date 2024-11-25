@@ -5,6 +5,7 @@ export default {
     version: '1.0.0',
     orientation: 'portrait',
     icon: './assets/icon.png',
+    scheme: 'dailyinspiration',
     splash: {
       image: './assets/splash.png',
       resizeMode: 'contain',
@@ -17,13 +18,21 @@ export default {
       '**/*'
     ],
     ios: {
-      supportsTablet: true
+      supportsTablet: true,
+      bundleIdentifier: 'com.yourcompany.dailyinspiration'
     },
     android: {
       adaptiveIcon: {
         foregroundImage: './assets/adaptive-icon.png',
         backgroundColor: '#FFFFFF'
-      }
+      },
+      package: 'com.yourcompany.dailyinspiration'
+    },
+    plugins: [
+      'expo-router'
+    ],
+    experiments: {
+      newArchEnabled: true
     }
   }
 }; 
